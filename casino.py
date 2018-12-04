@@ -11,14 +11,14 @@ from decimal import Decimal
 import random
 
 skrita_stevilka = round(random.uniform(0, 30))
-print skrita_stevilka
+# print skrita_stevilka
 
 
 while True:
     odgovor = int(raw_input("\nUgani skrito številko med 1 in 30: "))
 
     if odgovor == skrita_stevilka:
-        print textColor.BOLD + textColor. GREEN + "\nČestitamo, " + str(skrita_stevilka).rstrip('0').rstrip('.') + " je pravilni odgovor!" if '.' in str(skrita_stevilka) else str(skrita_stevilka) + "je pravilni odgovor!"
+        print textColor.BOLD + textColor. GREEN + "\nČestitamo, " + str(skrita_stevilka).rstrip('0').rstrip('.') + " je pravilni odgovor!" + textColor.RESET if '.' in str(skrita_stevilka) else str(skrita_stevilka) + "je pravilni odgovor!" + textColor.RESET
         break
     else:
         print textColor.ORANGE + "\nŽal " + str(odgovor) + " ni pravilen odgovor. Prosim poiskusite ponovno!" + textColor.RESET
