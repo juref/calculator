@@ -37,21 +37,21 @@ while True:
 
 if operacija == "+":
     vsota = float(prvo_stevilo) + float(drugo_stevilo)
-    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " + " + str(drugo_stevilo) + " = " + (str(round(vsota, 3))).rstrip('0').rstrip('.') if '.' in (str(round(vsota, 3))) else (str(round(vsota, 3)))
+    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " + " + str(drugo_stevilo) + " = " + (str(round(vsota, 3))).rstrip('0').rstrip('.') + textColor.RESET if '.' in (str(round(vsota, 3))) else (str(round(vsota, 3))) + textColor.RESET
 
 
 elif operacija == "-":
     razlika = float(prvo_stevilo) - float(drugo_stevilo)
-    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " - " + str(drugo_stevilo) + " = " + (str(round(razlika, 3))).rstrip('0').rstrip('.') if '.' in (str(round(razlika, 3))) else (str(round(razlika, 3)))
+    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " - " + str(drugo_stevilo) + " = " + (str(round(razlika, 3))).rstrip('0').rstrip('.') + textColor.RESET if '.' in (str(round(razlika, 3))) else (str(round(razlika, 3))) + textColor.RESET
 
 elif operacija == "*":
     kolicnik = float(prvo_stevilo) * float(drugo_stevilo)
-    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " * " + str(drugo_stevilo) + " = " + (str(round(kolicnik, 3))).rstrip('0').rstrip('.') if '.' in (str(round(kolicnik, 3))) else (str(round(kolicnik, 3)))
+    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " * " + str(drugo_stevilo) + " = " + (str(round(kolicnik, 3))).rstrip('0').rstrip('.') + textColor.RESET if '.' in (str(round(kolicnik, 3))) else (str(round(kolicnik, 3))) + textColor.RESET
 
 
 elif operacija == "/":
     ulomek = float(prvo_stevilo) / float(drugo_stevilo)
-    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " / " + str(drugo_stevilo) + " = " + (str(round(ulomek, 3))).rstrip('0').rstrip('.') if '.' in (str(round(ulomek, 3))) else (str(round(ulomek, 3)))
+    print textColor.GREEN + textColor.BOLD + str(prvo_stevilo) + " / " + str(drugo_stevilo) + " = " + (str(round(ulomek, 3))).rstrip('0').rstrip('.') + textColor.RESET if '.' in (str(round(ulomek, 3))) else (str(round(ulomek, 3))) + textColor.RESET
 
 else:
     print "Neznana funkcija!"
