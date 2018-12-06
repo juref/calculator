@@ -71,7 +71,7 @@ while True:
 
         while True:
             prvo = raw_input("Vnesite prvo število: ")
-            if prvo.isdigit():
+            if not prvo.isalpha():
                 todo_list.append(prvo)
                 break
             else:
@@ -87,7 +87,7 @@ while True:
 
         while True:
             drugo = raw_input("Vnesite drugo število: ")
-            if drugo.isdigit():
+            if not drugo.isalpha():
                 todo_list.append(drugo)
                 break
             else:
