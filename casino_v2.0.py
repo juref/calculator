@@ -20,6 +20,7 @@ poskus = 0
 while poskus < 3:
     se_poskus = 3 - poskus
     odgovor = str(raw_input("\nUgani skrito številko med 1 in 30 (poskusiš lahko še " + str(se_poskus) + "x): "))
+
     if odgovor.isalpha() or len(odgovor) == 0 or " " in odgovor or "+" in odgovor or "-" in odgovor or "*" in odgovor or "/" in odgovor:
         print "\033[91mTo ni število\033[0m"
     elif int(odgovor) == skrita_stevilka:
