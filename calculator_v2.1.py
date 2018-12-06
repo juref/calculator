@@ -71,31 +71,29 @@ while True:
 
         while True:
             prvo = raw_input("Vnesite prvo število: ")
-            if not prvo.isalpha():
+            if prvo.isalpha() or len(prvo) == 0 or " " in prvo:
+                print "\033[91mTo ni število\033[0m"
+            else:
                 todo_list.append(prvo)
                 break
-            else:
-                print "\033[91mTo ni število\033[0m"
 
         while True:
             znak = raw_input("Vnesi željeno funkcijo (+, -, * ali /): ")
-            if znak in ("+", "-", "*", "/"):
+            if not znak in ("+", "-", "*", "/"):
+                print "\033[91mNepoznana funkcija\033[0m"
+            else:
                 todo_list.append(znak)
                 break
-            else:
-                print "\033[91mNepoznana funkcija\033[0m"
-
         while True:
             drugo = raw_input("Vnesite drugo število: ")
-            if not drugo.isalpha():
+            if drugo.isalpha() or len(drugo) == 0 or " " in drugo:
+                print "\033[91mTo ni število\033[0m"
+            else:
                 todo_list.append(drugo)
                 break
-            else:
-                print "\033[91mTo ni število\033[0m"
         ### END definicaja spremenljivk ###
 
         history_list = kalkulator(todo_list[0], todo_list[1], todo_list[2])
         history.append(history_list)
-
 ### END vprašanje ###
 
